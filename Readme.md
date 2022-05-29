@@ -3,7 +3,7 @@
 Ushbu Django rest framework rejasi o'quvchilarni musobaqaga tayyorlash jarayonida tuzildi 
 ## Reja:
 
-1. [API va REST API]()
+1. [API va REST API](1.%20API%20va%20REST%20API)
 2. [Djangoda API yasash]()
 3. [DRF. Serializer 11-14]()
 4. [DRF: APIView. Validatsiya 15-19]()
