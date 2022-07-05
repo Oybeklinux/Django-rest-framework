@@ -2,7 +2,7 @@
 
 ## Reja:
 
-1. [Django asoslari](https://telegra.ph/Django-1-dars-10-09)       [[Video]](https://www.youtube.com/playlist?list=PLZ67NWgKA8g7b-o4w5bm3B4fngZ2ug959) va 
+1. [Django asoslari](https://telegra.ph/Django-1-dars-10-09)       [[Video]](https://www.youtube.com/playlist?list=PLZ67NWgKA8g7b-o4w5bm3B4fngZ2ug959) 
 2. [Modellar bilan ishlash](2.%20Modellar%20bilan%20ishlash)
 3. [QuerySet bilan ishlash]
 4. [API va REST API. Djangoda API]
