@@ -1,12 +1,12 @@
 # Django REST Framework kursi
-## So'z boshi
-Ushbu Django rest framework rejasi o'quvchilarni musobaqaga tayyorlash jarayonida tuzildi 
+
 ## Reja:
 
-1. [MB va SQL](https://github.com/Oybeklinux/Foundation_exercices/tree/main/24.%20SQLite.%20CRUD)
-2. [API va REST API](2.%20API%20va%20REST%20API)
-3. [Djangi asoslari](https://telegra.ph/Django-1-dars-10-09)       [[Video]](https://www.youtube.com/playlist?list=PLZ67NWgKA8g7b-o4w5bm3B4fngZ2ug959) va [Modellar](https://telegra.ph/Django-2-dars-03-24) [Video](https://www.youtube.com/playlist?list=PLZ67NWgKA8g7b-o4w5bm3B4fngZ2ug959)
-4. [Djangoda API yasash]()
+1 [Django asoslari](https://telegra.ph/Django-1-dars-10-09)       [[Video]](https://www.youtube.com/playlist?list=PLZ67NWgKA8g7b-o4w5bm3B4fngZ2ug959) va 
+2. [Modellar bilan ishlash]
+3. [QuerySet bilan ishlash]
+4. [API va REST API. Djangoda API](4. API va REST API)
+
 5. [DRF. Serializer 11-14]()
 6. [DRF: APIView. Validatsiya 15-19]()
 7. [DRF: Bog'lanish. Tarmoqli serializer 20-24]()
@@ -23,3 +23,4 @@ Ushbu Django rest framework rejasi o'quvchilarni musobaqaga tayyorlash jarayonid
 18. [Postman bilan ishlash]()
 19. [git bilan ishlash]()
 20. [herokuga o'ratish]()
+    
