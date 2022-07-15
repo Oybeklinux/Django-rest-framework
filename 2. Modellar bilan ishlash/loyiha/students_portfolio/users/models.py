@@ -21,14 +21,16 @@ class Profile(models.Model):
     bio = models.TextField(blank=True, null=True)
     location = models.CharField(max_length=100, blank=False, null=False)
     profile_image = models.ImageField(upload_to='portfolio')
-    social_github = models.CharField(max_length=100, blank=False, null=True)
+    social_github = models.CharField(max_length=100, blank=True, null=True)
     social_telegram = models.CharField(max_length=100, blank=True, null=False)
     social_instagram = models.CharField(max_length=100, default="instagram")
-    social_youtube = models.CharField(max_length=100)
-    social_website = models.CharField(max_length=100)
+    social_youtube = models.CharField(max_length=100, blank=True, null=True)
+    social_website = models.CharField(max_length=100, blank=True, null=True)
     created = models.DateField(auto_now_add=True)
-    file = models.FileField(upload_to='files', default='files/default.xlsx', validators=[validate_file_extension])
-    video = models.FileField(upload_to='videos')
-    audio = models.FileField(upload_to='audios')
+    file = models.FileField(upload_to='files',  validators=[validate_file_extension], blank=True, null=True)
+    video = models.FileField(upload_to='videos', blank=True, null=True)
+    audio = models.FileField(upload_to='audios', blank=True, null=True)
 
-
+    def __str__(self):
+        # return f"{self.user.last_name} {self.user.first_name}"
+        return f"{self.user.username}"
