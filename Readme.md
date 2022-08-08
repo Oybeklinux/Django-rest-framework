@@ -8,7 +8,8 @@
 4. [QuerySet qaytaradigan metodlar](4.%20QuerySet.%20QuerySet%20qaytaradigan%20metodlar)
 5. [QuerySet. Mantiqiy shartlar va agregat funksiyalar](5.%20QuerySet.%20Mantiqiy%20shartlar%20va%20agregat%20funksiyalar)
 6. [QuerySet. QuerySet qaytarmaydigan metodlar](6.%20QuerySet.%20QuerySet%20qaytarmaydigan%20metodlar)
-7. [API va REST API. Djangoda API](7.%20API%20va%20REST%20API)
+7. [API va REST API (Nazariya)](7.%20API%20va%20REST%20API%20(Nazariya))
+7. [API va REST API](7.%20API%20va%20REST%20API)
 8. [DRF. Serializer 11-14]
 6. [DRF: APIView. Validatsiya 15-19]
 7. [DRF: Bog'lanish. Tarmoqli serializer 20-24]
