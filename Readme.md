@@ -10,8 +10,8 @@
 6. [QuerySet. QuerySet qaytarmaydigan metodlar](6.%20QuerySet.%20QuerySet%20qaytarmaydigan%20metodlar)
 7. [API va REST API (Nazariya)](7.%20API%20va%20REST%20API%20(Nazariya))
 7. [API va REST API](7.%20API%20va%20REST%20API)
-8. [DRF. Serializer 11-14]
-6. [DRF: APIView. Validatsiya 15-19]
+8. [Class View](8.%20Class%20view)
+6. [Nested serializer. Pagination. Filtering. Security](9.%20Nested%20serializer.%20Pagination.%20Filtering.%20Security)
 7. [DRF: Bog'lanish. Tarmoqli serializer 20-24]
 8. [DRF: GenericAPIView va Mixin 25-29]
 9. [DRF: Viewset va Router 30-32]
