@@ -8,7 +8,6 @@
 4. [QuerySet. QuerySet qaytaradigan metodlar](4.%20QuerySet.%20QuerySet%20qaytaradigan%20metodlar)
 5. [QuerySet. Mantiqiy shartlar va agregat funksiyalar](5.%20QuerySet.%20Mantiqiy%20shartlar%20va%20agregat%20funksiyalar)
 6. [QuerySet. QuerySet qaytarmaydigan metodlar](6.%20QuerySet.%20QuerySet%20qaytarmaydigan%20metodlar)
-7. [API va REST API (Nazariya)](7.%20API%20va%20REST%20API%20(Nazariya))
 7. [API va REST API](7.%20API%20va%20REST%20API)
 8. [Class View: APIVIEW, Mixin, Generics, ViewSet](8.%20Class%20view)
 9. [Nested serializer. Pagination. Filtering](9.%20Nested%20serializer.%20Pagination.%20Filtering.%20Security)
