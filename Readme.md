@@ -12,7 +12,7 @@
 7. [API va REST API](7.%20API%20va%20REST%20API)
 8. [Class View: APIVIEW, Mixin, Generics, ViewSet](8.%20Class%20view)
 9. [Nested serializer. Pagination. Filtering](9.%20Nested%20serializer.%20Pagination.%20Filtering.%20Security)
-10. [Deploy: heroku, ahost]
+10. [Deploy: heroku, ahost](10.%20Deploy%20(heroku.%20ahost))
 11. [Security. Validation. Authentification]
 12. [Bonus: SMS, Payme]
     
