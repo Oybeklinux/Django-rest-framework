@@ -308,7 +308,7 @@ Kodni yozib bo'lgach ishga tushiramiz. file ga xato fayl kiritamiz, natija quyid
 ***Vazifa:**
 
 1. Huddi shunday funksiyani video va mp3 larga yozib chiqing
-2. birnechta ma'lumot kiriting:
+2. Bir nechta ma'lumot kiriting:
 - Django admin paneli yordamida
 - DB Browser yordamida
 - Exceldagi ma'lumotni csv formotda saqlab, DB Browserdan import qiling
