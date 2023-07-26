@@ -238,9 +238,9 @@ audio = models.FileField(upload_to='audios', null=True)
 Ikkinchi holatni ko'rishdan avval oldingi holatni bekor qilamiz. Uning uchun file, video, audio qatorlarini comment qilib, makemigrations, mirate buyruqlarini amalga oshiramiz:
 
 ```python
-# file = models.FileField(upload_to='files', null=True)
-# video = models.FileField(upload_to='videos', null=True)
-# audio = models.FileField(upload_to='audios', null=True)
+file = models.FileField(upload_to='files')
+video = models.FileField(upload_to='videos')
+audio = models.FileField(upload_to='audios')
 ```
 ```commandline
 python manage.py makemigrations
