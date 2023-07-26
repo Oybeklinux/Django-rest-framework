@@ -437,6 +437,7 @@ python manage.py migrate
 
 #### 2.1.7 Signallar
 [Signal bo'yicha hujjat](https://docs.djangoproject.com/en/4.1/topics/signals/)
+[Signal turlari](https://docs.djangoproject.com/en/4.1/ref/signals/#django.db.models.signals.pre_save)
 <br>
 Videolar:
 - [Signal. Post save](https://www.youtube.com/watch?v=K5RQUFW0ePA&list=PLZ67NWgKA8g7b-o4w5bm3B4fngZ2ug959&index=48)
