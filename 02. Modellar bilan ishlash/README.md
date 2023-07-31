@@ -425,9 +425,13 @@ Message jadvalida o'quvchiga yuboriladigan habarlar saqlanadi
 from django.db import models
 
 
+# Talabaga yuborilgan habarlar
 class Message(models.Model):
+    # Habar sarlavhasi
     subject = models.CharField(max_length=100)
+    # Habar matni
     body = models.TextField()
+    # Habar yozilgan sana
     created = models.DateField(auto_now_add=True)
 ```
 
