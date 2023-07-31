@@ -118,17 +118,21 @@ python manage.py createsuperuser
 from django.db import models
 
 
-# Create your models here.
+# Talaba haqida ma'lumot
 class Profile(models.Model):
+    # bio bazada bo'sh bo'lmasin, ma'lumot kiritilganda avtobiografiyani kiritish shart
     bio = models.TextField(blank=False, null=True)
-    location = models.CharField(max_length=100)
+    # turar joyi
+    location = models.CharField(max_length=300)
+    # talaba rasmi portfolio katalogiga yuklansin, rasmni ko'rsatish ixtiyoriy, agar yuklamasa, emtpy.png ni olsin
     profile_image = models.ImageField(upload_to='portfolio', blank=True, default='empty.png')
-    social_github = models.CharField(max_length=100)
-    social_telegram = models.CharField(max_length=100)
-    social_instagram = models.CharField(max_length=100)
-    social_youtube = models.CharField(max_length=100)
-    social_website = models.CharField(max_length=100)
-    created = models.DateField(auto_now=True)
+    social_github = models.CharField(max_length=300)
+    social_telegram = models.CharField(max_length=300)
+    social_instagram = models.CharField(max_length=300)
+    social_youtube = models.CharField(max_length=300)
+    social_website = models.CharField(max_length=300)
+    # Birinchi marta bazaga kiritilayotgan vaqtni yozsin
+    created = models.DateField(auto_now_add=True)
 ```
 
 Bu yerda:
