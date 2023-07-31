@@ -120,17 +120,18 @@ from django.db import models
 
 # Talaba haqida ma'lumot
 class Profile(models.Model):
-    # bio bazada bo'sh bo'lmasin, ma'lumot kiritilganda avtobiografiyani kiritish shart
-    bio = models.TextField(blank=False, null=True)
-    # turar joyi
-    location = models.CharField(max_length=300)
-    # talaba rasmi portfolio katalogiga yuklansin, rasmni ko'rsatish ixtiyoriy, agar yuklamasa, emtpy.png ni olsin
+    # Har bir talaba haqida ma'lumot bazada bo'lishi shart
+    bio = models.TextField(null=True)
+    # Talaba turar joyi
+    location = models.CharField(blank=True, max_length=300)
+    # Talaba rasmi portfolio katalogiga yuklansin, rasmni ko'rsatish ixtiyoriy, agar yuklamasa, emtpy.png ni olsin
     profile_image = models.ImageField(upload_to='portfolio', blank=True, default='empty.png')
-    social_github = models.CharField(max_length=300)
-    social_telegram = models.CharField(max_length=300)
-    social_instagram = models.CharField(max_length=300)
-    social_youtube = models.CharField(max_length=300)
-    social_website = models.CharField(max_length=300)
+    # Ijtimoiy tarmoqlar havolasini kiritish ixtiyoriy
+    social_github = models.CharField(blank=True, max_length=300)
+    social_telegram = models.CharField(blank=True, max_length=300)
+    social_instagram = models.CharField(blank=True, max_length=300)
+    social_youtube = models.CharField(blank=True, max_length=300)
+    social_website = models.CharField(blank=True, max_length=300)
     # Birinchi marta bazaga kiritilayotgan vaqtni yozsin
     created = models.DateField(auto_now_add=True)
 ```
