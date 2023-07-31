@@ -182,8 +182,25 @@ Admin paneldan Profile ga ma'lumot qo'shamiz. So'ng rasm qayerga yuklanganligiga
 Har hil qiymat berib ko'ring:
 - MEDIA_ROOT = "". Buni yozmasangiz ham shunday bo'ladi, ya'ni default shunday. Bu holda to'g'ridan to'g'ri ilova katalogini ko'rsatgan bo'lasiz    
 - MEDIA_ROOT = '/media/'. Bu holda C:/media/ ni ko'rsatgan bo'lasiz
-- MEDIA_ROOT = os.path.join(BASE_DIR, 'media'). BASE_DIR - ilova katalogi yo'li. os.path.join yo'l yasab beradigan funksiya. Shunday qilib ilovasa media katalogini hosil qilib, yuklanadigan fayllar usha yerga tushadi 
+- MEDIA_ROOT = os.path.join(BASE_DIR, 'media'). BASE_DIR - ilova katalogi yo'li. os.path.join yo'l yasab beradigan funksiya. Shunday qilib ilovasa media katalogini hosil qilib, yuklanadigan fayllar usha yerga tushadi
 
+  MEDIA_URL - brauzerdan kiritiladigan URL, rasm yo'liga ta'siri yo'q. U settings.py faylida sozlanadi
+
+  1. settings.py faylida MEDIA_URL bo'lmasa yoki MEDIA_URL = '' bo'lsa, empty.png rasmni brauzerda URL ko'rinishi quyidagicha bo'ladi
+
+  ```text
+  127.0.0.1:8000/portfolio/empty.png
+  ```
+
+  2. MEDIA_URL = 'images/' bo'lsa, empty.png rasmni brauzerda URL ko'rinishi quyidagicha bo'ladi. MEDIA_URL Albatta / bilan tugashi kerak
+
+  ```text
+  127.0.0.1:8000/images/portfolio/empty.png
+  ```
+
+  MEDIA_ROOT - rasm qidiriladigan yo'l, URLga ta'siri yo'q.
+  1. settings.py da MEDIA_ROOT bo'lmasa, u avtomat mazkur loyiha yo'lini ko'rsatadi
+  
 11. Ma'lumotlarni qaysi birini to'ldirish shart yoki shart emasligini modelning tegishli hususiyatiga blank=True/False qiymatlarini berib, ishlatib tushunib oling. Djando admin panelda majburiy bo'lsa nomi qalin qilib yozilgan bo'ladi. 
 
 12. Admin panelda maydonlar avtomat biron qiymatni olishi uchun modelning tegishli hususiyatiga default=qiymat bering.
