@@ -125,7 +125,8 @@ class Profile(models.Model):
     # Talaba turar joyi
     location = models.CharField(blank=True, max_length=300)
     # Talaba rasmi portfolio katalogiga yuklansin, rasmni ko'rsatish ixtiyoriy, agar yuklamasa, emtpy.png ni olsin
-    profile_image = models.ImageField(upload_to='portfolio', blank=True, default='empty.png')
+    # Keyinchalik portfolio katalogiga empty.png ni saqlab qo'yamiz
+    profile_image = models.ImageField(upload_to='portfolio', blank=True, default='portfolio/empty.png')
     # Ijtimoiy tarmoqlar havolasini kiritish ixtiyoriy
     social_github = models.CharField(blank=True, max_length=300)
     social_telegram = models.CharField(blank=True, max_length=300)
@@ -134,6 +135,7 @@ class Profile(models.Model):
     social_website = models.CharField(blank=True, max_length=300)
     # Birinchi marta bazaga kiritilayotgan vaqtni yozsin
     created = models.DateField(auto_now_add=True)
+
 ```
 
 Bu yerda:
