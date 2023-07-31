@@ -387,15 +387,23 @@ User modeli Django modeli, Profile modelini tuzdik, endi Project modelini yozami
 ```python
 from django.db import models
 
-
+# Talaba qilgan loyihalar
 class Project(models.Model):
+    # loyiha nomi
     title = models.CharField(max_length=100)  # Majburiy
+    # loyiha haqida qisqacha ma'lumot
     description = models.TextField(blank=True, null=True)  # Majburiy emas
+    # loyiha ko'rinishi
     image = models.ImageField(upload_to='projects', default='projects/empty.png')
+    # loyihaga demo havola
     demo_link = models.CharField(max_length=200, blank=True, null=True)
+    # loyihaning haqiqiy havolasi
     source_code = models.CharField(max_length=200, blank=True, null=True)
+    # loyihaga berilgan ijobiy/salbiy hamma ovozlar soni
     vote_count = models.IntegerField(default=0)
+    # loyihaga berilgan ijobiy ovozlar nisbati (foizda)
     vote_ratio = models.IntegerField(default=0)
+    # loyiha kiritilgan sana
     created = models.DateField(auto_now_add=True)
 ```
 
