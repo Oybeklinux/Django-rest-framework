@@ -286,6 +286,35 @@ python manage.py makemigrations
 python manage.py migrate 
 ```  
 
+**Vazifa**
+
+Bizda jadvalda 4 talaba bor:
+![](Rasmlar/1.png)
+
+Faraz qiling Talaba haqida rezyume fayl yuklash kerak bo'lib qoldi. Endi Profile modeliga rezyume ni ham qo'shish kerak. Bazada ma'lumotlar bor. Ularni o'chirmasdan kiritish kerak. 
+Shu maqsadida Profile modelga quyidagicha yozib, makemigrations buyrug'ini amalga oshirsak ustun qo'shiladimi? Agar qo'shilsa, unda 4 talabaning rezyume ustunidagi qiymatlar nimaga teng bo'ladi? Agar qo'shilmasa, negaligini tushuntiring
+
+
+Eslatma: _null_ va _blank_ ni yozmasak, avtomat _null=False_, _blank=False_ bo'ladi
+
+
+1-holat
+```text
+rezyume = models.FileField(upload_to='files', default='files/default.docx')
+```
+2-holat
+```text
+rezyume = models.FileField(upload_to='files')
+```
+3-holat
+```text
+rezyume = models.FileField(upload_to='files', null=True)
+```
+4-holat
+```text
+rezyume = models.FileField(upload_to='files', blank=False)
+```
+
 <br>Endi ma'lumotlar kiriting. Fayllar qayerga yuklanayotganiga ahamiyat bering. Va yana video, file va audio ni bo'sh qoldiring, keyin esa uni ochib tekshiring.
 
 15. E'tibor bering, audio, video, file ga hohlagan fayllarni berishingiz mumkin, endi uni cheklaymiz. Faraz qilamiz rezyumeni ['.pdf', '.doc', '.docx'] formatlarda yuklash kerak. Bu kengaytmalarni tekshiradigan qo'shimcha funksiya yozamiz (validate_file_extension):
