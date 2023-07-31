@@ -298,19 +298,19 @@ Shu maqsadida Profile modelga quyidagicha yozib, makemigrations buyrug'ini amalg
 Eslatma: _null_ va _blank_ ni yozmasak, avtomat _null=False_, _blank=False_ bo'ladi
 
 
-1-holat
+**1-variant**
 ```text
 rezyume = models.FileField(upload_to='files', default='files/default.docx')
 ```
-2-holat
+**2-variant**
 ```text
 rezyume = models.FileField(upload_to='files')
 ```
-3-holat
+**3-variant**
 ```text
 rezyume = models.FileField(upload_to='files', null=True)
 ```
-4-holat
+**4-variant**
 ```text
 rezyume = models.FileField(upload_to='files', blank=False)
 ```
