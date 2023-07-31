@@ -184,22 +184,6 @@ Har hil qiymat berib ko'ring:
 - MEDIA_ROOT = '/media/'. Bu holda C:/media/ ni ko'rsatgan bo'lasiz
 - MEDIA_ROOT = os.path.join(BASE_DIR, 'media'). BASE_DIR - ilova katalogi yo'li. os.path.join yo'l yasab beradigan funksiya. Shunday qilib ilovasa media katalogini hosil qilib, yuklanadigan fayllar usha yerga tushadi
 
-  MEDIA_URL - brauzerdan kiritiladigan URL, rasm yo'liga ta'siri yo'q. U settings.py faylida sozlanadi
-
-  1. settings.py faylida MEDIA_URL bo'lmasa yoki MEDIA_URL = '' bo'lsa, empty.png rasmni brauzerda URL ko'rinishi quyidagicha bo'ladi
-
-  ```text
-  127.0.0.1:8000/portfolio/empty.png
-  ```
-
-  2. MEDIA_URL = 'images/' bo'lsa, empty.png rasmni brauzerda URL ko'rinishi quyidagicha bo'ladi. MEDIA_URL Albatta / bilan tugashi kerak
-
-  ```text
-  127.0.0.1:8000/images/portfolio/empty.png
-  ```
-
-  MEDIA_ROOT - rasm qidiriladigan yo'l, URLga ta'siri yo'q.
-  1. settings.py da MEDIA_ROOT bo'lmasa, u avtomat mazkur loyiha yo'lini ko'rsatadi
   
 11. Ma'lumotlarni qaysi birini to'ldirish shart yoki shart emasligini modelning tegishli hususiyatiga blank=True/False qiymatlarini berib, ishlatib tushunib oling. Djando admin panelda majburiy bo'lsa nomi qalin qilib yozilgan bo'ladi. 
 
@@ -215,7 +199,7 @@ Kiritilgan ma'lumotlarni ko'ra olasiz, faqat fayllarni hususan rasmni ko'rmoqchi
 MEDIA_URL = ""
 ```
 
-So'ng bu yo'lni urls.py ga ko'rsatib qo'yishimiz kerak, aks holda ochmaydi
+So'ng bu yo'lni urls.py ga ko'rsatib qo'yishimiz kerak
 ```python
 from django.contrib import admin
 from django.urls import path
@@ -231,6 +215,20 @@ urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 ```
 
 Ishga tushirib rasmlarni ochib ko'ring. MEDIA_URL ni o'zgartirib ko'ring, yana ishga tushirib, rasmlarni oching ba urlga ahamiyat bering. Nima o'zgardi?
+
+  MEDIA_URL - brauzerdan kiritiladigan URL, rasm yo'liga ta'siri yo'q. U settings.py faylida sozlanadi
+
+  1. settings.py faylida MEDIA_URL bo'lmasa yoki MEDIA_URL = '' bo'lsa, empty.png rasmni brauzerda URL ko'rinishi quyidagicha bo'ladi
+
+  ```text
+  127.0.0.1:8000/portfolio/empty.png
+  ```
+
+  2. MEDIA_URL = 'images/' bo'lsa, empty.png rasmni brauzerda URL ko'rinishi quyidagicha bo'ladi. MEDIA_URL Albatta / bilan tugashi kerak
+
+  ```text
+  127.0.0.1:8000/images/portfolio/empty.png
+  ```
 
 14. Ushbu Profile modeliga video(eng yaxshi ko'rgan kino), audio (eng yaxshi ko'rgan musiqasi), file(rezyumesi) ni quyidagicha qo'shing:
 
