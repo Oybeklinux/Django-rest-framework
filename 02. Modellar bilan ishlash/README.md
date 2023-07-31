@@ -451,9 +451,13 @@ from django.db import models
 
 #  ...
 
+# Talaba malakalari. Bilgan freymvork va dasturlash tillari haqida
 class Skill(models.Model):
+    # Malaka nomi. M: Javascript
     name = models.CharField(max_length=100)
+    # Malaka haqida qisqacha ma'lumot
     description = models.TextField()
+    # Kiritilgan sana
     created = models.DateField(auto_now_add=True)
 
 ```
@@ -473,10 +477,13 @@ Review jadvalida mijozlarning o'quvchining loyihasiga berilgan izohi va bahosi s
 from django.db import models
 
 #  ...
-
+# Loyihaga bildirilgan fikrlar
 class Review(models.Model):
+    # Fikr matni
     body = models.TextField()
+    # Bal
     value = models.IntegerField(default=0)
+    # Kiritilgan sana
     created = models.DateField(auto_now_add=True)
 ```
 
@@ -495,8 +502,9 @@ Tag jadvalida o'quvchining loyihasida nima texnologiyalar, qaysi dasturlash till
 from django.db import models
 
 #  ...
-
+# Loyiha qaysi til va freymvorklarda qilingan
 class Tag(models.Model):
+    # Til yoki freymvork nomi
     name = models.CharField(max_length=100)
     created = models.DateField(auto_now_add=True)
 ```
