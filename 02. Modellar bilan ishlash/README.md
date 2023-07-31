@@ -326,6 +326,9 @@ So'ng shu faylning o'zida bu funksiyani Profile modelining file hususiyatiga val
 
 
 ```python
+import os
+from django.core.exceptions import ValidationError
+
 def validate_file_extension(value):
     """
     Agar fayl kengaytmasi berilganlarning orasida bo'lmasa, xatolik beradi
@@ -335,34 +338,39 @@ def validate_file_extension(value):
     ext = os.path.splitext(value.name)[1]
     valid_extensions = ['.pdf', '.doc', '.docx']
     if not ext.lower() in valid_extensions:
-        raise ValidationError('Unsupported file extension.')
-
+        raise ValidationError("Fayl pdf, docx, doc formatlarida bo'lishi kerak") 
+    
+    
+# Talaba haqida ma'lumot
 class Profile(models.Model):
-    bio = models.TextField(blank=True, null=True)
-    location = models.CharField(max_length=100, blank=False, null=False)
-    profile_image = models.ImageField(upload_to='portfolio')
-    social_github = models.CharField(max_length=100, blank=False, null=True)
-    social_telegram = models.CharField(max_length=100, blank=True, null=False)
-    social_instagram = models.CharField(max_length=100, default="instagram")
-    social_youtube = models.CharField(max_length=100)
-    social_website = models.CharField(max_length=100)
+    # Har bir talaba haqida ma'lumot bazada bo'lishi shart
+    bio = models.TextField(null=True)
+    # Talaba turar joyi
+    location = models.CharField(blank=True, max_length=300)
+    # Talaba rasmi portfolio katalogiga yuklansin, rasmni ko'rsatish ixtiyoriy, agar yuklamasa, emtpy.png ni olsin
+    # Keyinchalik portfolio katalogiga empty.png ni saqlab qo'yamiz
+    profile_image = models.ImageField(upload_to='portfolio', blank=True, default='portfolio/empty.png')
+    # Ijtimoiy tarmoqlar havolasini kiritish ixtiyoriy
+    social_github = models.CharField(blank=True, max_length=300)
+    social_telegram = models.CharField(blank=True, max_length=300)
+    social_instagram = models.CharField(blank=True, max_length=300)
+    social_youtube = models.CharField(blank=True, max_length=300)
+    social_website = models.CharField(blank=True, max_length=300)
+    # Birinchi marta bazaga kiritilayotgan vaqtni yozsin
     created = models.DateField(auto_now_add=True)
-    file = models.FileField(upload_to='files', default='files/default.xlsx', validators=[validate_file_extension])
-    video = models.FileField(upload_to='videos')
-    audio = models.FileField(upload_to='audios')
+    file = models.FileField(upload_to='files', default='files/default.docx',  validators=[validate_file_extension])
+    video = models.FileField(upload_to='videos', default='videos/default.avi')
+    audio = models.FileField(upload_to='audios', default='audios/default.mp3')
 ```
 
 Kodni yozib bo'lgach ishga tushiramiz. file ga xato fayl kiritamiz, natija quyidagicha bo'ladi:
 
-![](Rasmlar/img_5.png)
+![](Rasmlar/12.png)
 
-***Vazifa:**
+**Vazifa:**
 
-1. Huddi shunday funksiyani video va mp3 larga yozib chiqing
-2. Bir nechta ma'lumot kiriting:
-- Django admin paneli yordamida
-- DB Browser yordamida
-- Exceldagi ma'lumotni csv formotda saqlab, DB Browserdan import qiling
+1. Profile modelidagi audio uchun faqat mp3 fayllarni qabul qiladigan funksiya yozing. Ma'lumot kiritib tekshirib ko'ring
+2. Qanday qilib kodni o'zgartirmasdan audio ga mp3 dan boshqa faylni yozib qo'yish mumkin 
 
 #### 2.1.2 Project modeli
 
