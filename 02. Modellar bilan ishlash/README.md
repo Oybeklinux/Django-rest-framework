@@ -591,7 +591,7 @@ def delete_user(sender, instance, **kwargs):
 ```
 #### 2.1.8 Property
 
-Masala. Foydalanuvchi loyihaga 'Yoqdi' yoki 'Yoqmadi' yugmasini bosganda  dastur o'zi bazadagi vote_count va vote_ratio qiymatlarini hisoblab yangilab qo'ysin. 
+Masala. Foydalanuvchi loyihaga 'Yoqdi' yoki 'Yoqmadi' tugmasini bosganda  dastur o'zi bazadagi vote_count va vote_ratio qiymatlarini hisoblab yangilab qo'ysin. 
 Funksiya o'zi hisoblaydi, tashqaridan o'zgartirilmaydi, shuning uchun property dekoratoridan foydalansak bo'ladi
 
 ```python
