@@ -68,9 +68,13 @@ MB sxemasini qilib bo'lgach, yangi loyiha ochib, app qo'shib modellarni yozishni
 <br>
 1. Yangi loyiha ochish
 ```commandline
+# yangi loyiha yaratish
 django-admin startproject students_portfolio
+# loyihaga kirib olamiz
 cd students_portfolio
+# users ilovasini qo'shamiz
 python manage.py startapp users
+# projects ilovasini qo'shamiz
 python manage.py startapp projects
 ```
 
@@ -85,8 +89,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'projects.apps.ProjectsConfig',
-    'users.apps.UsersConfig'
+    'projects.apps.ProjectsConfig', # projects ilovasini ro'yxatdan o'tkazamiz
+    'users.apps.UsersConfig' # projects ilovasini ro'yxatdan o'tkazamiz
 ]
 ```
 
