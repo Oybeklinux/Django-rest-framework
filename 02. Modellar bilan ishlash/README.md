@@ -841,20 +841,27 @@ Endi loyihani ishga tushirib har bir jadvalga to'liq ma'lumot kiritib chiqamiz. 
 
 
 ## 3. Amaliyot. O'quvchi
-Quyidagi loyihalarning MB sxemalarini, so'ng modellarini tuzing:
-1. Restoran sahifasi uchun [saytlardan](https://app.dbdesigner.net/) foydalanib MB sxemalasini tuzib, so'ng Djangoda loyiha ochib, ilova qo'shib, modellarini tuzing 
-  [Sayt](https://997926933shoh.github.io/ADANA_KEBAB/#include)
-2. Flakonlar sahifasi uchun mos ravishda MB sxemalasi, loyiha, ilova va modellarni tuzing
-   [Sayt](https://ru.flakon.uz/)
-3. Fast food sahifasi uchun mos ravishda MB sxemalasi, loyiha, ilova va modellarni tuzing 
-   [Sayt](https://buddyburger.kannas.uz/)
-4. O'quvchilarni bor/yo'q qilish sahifasi uchun quyidagi funksiyalarga qarab, o'zingiz o'ylab ko'ring qanday MB sxemalasi bo'ladi, loyiha, ilova va modellarni tuzing. 
-<br>
-   
-Funksiyalar:
+Quyidagi saxifalarning MB sxemalasini tuzib, so'ng Djangoda loyiha ochib, ilova qo'shib, modellarini tuzing
+MB sxemasi quyidagi [dbdesigner](https://app.dbdesigner.net/) saytidan  foydalaning 
+1. Restoran sahifasi [adanakebab](https://997926933shoh.github.io/ADANA_KEBAB/#include)
+ 
+2. Online kurs sahifas [udemy.com](https://www.udemy.com/)
 
+3. Yangiliklar sahifasi [kun.uz](https://kun.uz/)
+
+
+Endi faraz qiling siz o'quvchilarni bor/yo'q qiladigan sahifa qilishingiz kerak. Uni quyidagi imkoniyatlari bo'lishi kerak:
+<br>
 - O'quvchilarni bor/yo'q deb belgi qo'yish
 - Uyga vazifani bajardi/bajarmadi deb belgi qo'yish
-- Har bir o'qituvchini o'zini alohida sahifasi bo'lsin
-- O'qituvchi kirganda faqat o'zini guruhini ko'rsin
-- Har darsni ohirida o'quvchilar ota-onasiga avtomat SMS habar jo'natilsin 
+
+Yuqoridagi talab va imkoniyatlarga qarab o'zingiz o'ylab MB sxemasini tuzing, so'ng loyiha, ilova va modellarni yozing. 
+
+Uning uchun o'zingizga quyidagi savollarni berib, javob toping
+
+**O'ylab ko'ring:**
+1. Yuqoridagi imkoniyatlar bo'lishi uchun bazada qanday ma'lumotlar kerak?
+2. U ma'lumotlarning strukturasi qanday bo'ladi?
+  
+   Unutmang. Jadval nima haqida bo'lsa, usha narsa qaytarilmas bo'lishi kerak:
+
