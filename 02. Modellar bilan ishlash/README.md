@@ -786,7 +786,7 @@ class Review(models.Model):
     body = models.TextField()
     value = models.IntegerField(default=0)
     # Foreign Key
-    user = models.ForeignKey(Profile, on_delete=models.SET_NULL, null=True)
+    project = models.ForeignKey(Project, on_delete=models.SET_NULL, null=True)
     # Foreign Key
     user = models.ForeignKey(Profile, on_delete=models.SET_NULL, null=True)
 ```
