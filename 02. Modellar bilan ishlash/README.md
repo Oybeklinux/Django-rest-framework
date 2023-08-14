@@ -164,6 +164,8 @@ Bu yerda: <br>
 - makemigrations - Modelni o'qib ilovada migrations katalogida har bir buyruq uhcun alohida faylda (kemta-ket) kod generatsiya qiladi. Keyinchalik uni ishga tushirish uchun
 - migrate - makemigrations dan hosil bo'lgan kodni ishga tushirib, MBga ta'sir o'tkazadi, ya'ni o'zgartiradi
 
+Eslatma: 
+Agar Pillow bo'yicha xatolik bo'lsa, quyidagicha pillor paketini o'rnatib yuborish
 9. Loyihani ishga tushirib, admin panel dan ko'ring. Jadval ko'rinmaydi. Ko'rinishi uchun admin.py fayliga quyidagini yozamiz
 
 ```python
