@@ -1,39 +1,28 @@
 ﻿# Mavzu 2: Modellar bilan ishlash
- 
-## Reja:
-1. [Bilim](#1-bilim)
-   - [1.1 Terminlar](#11-terminlar)
-   - [1.2 O'qish uchun materiallar](#12-oqish-uchun-materiallar)
-2. [Amaliyot. O'qituvchi](#2-amaliyot-oqituvchi)
-3. [Amaliyot. O'quvchi](#3-amaliyot-oquvchi)
 
-## 1. Bilim
+<!-- TOC -->
+* [1 CREATE - tuzish](#1-create---tuzish)
+  * [1.1 Profile modeli](#11-profile-modeli)
+  * [1.2 Project modeli](#12-project-modeli)
+  * [1.3 Message modeli](#13-message-modeli)
+  * [1.4 Skill modeli](#14-skill-modeli)
+  * [1.5 Review modeli](#15-review-modeli)
+  * [1.6 Tag modeli](#16-tag-modeli)
+  * [1.7 Signallar](#17-signallar)
+  * [1.8 Property](#18-property)
+* [2 Modellarni bog'lash](#2-modellarni-boglash)
+  * [2.1 Birga bir bog'lash](#21-birga-bir-boglash)
+  * [2.2 Birga ko'p](#22-birga-kop)
+    * [Project va Review](#project-va-review)
+    * [Profile va Message](#profile-va-message)
+    * [Profile va Skill](#profile-va-skill)
+    * [Profile va Project](#profile-va-project)
+    * [Profile va Review](#profile-va-review)
+  * [2.3 Ko'pga ko'p](#23-kopga-ko--p)
+* [3. Amaliyot. O'quvchi](#3-amaliyot-oquvchi)
+<!-- TOC -->
 
-### 1.1 Terminlar
-```
-```
-### 1.2 O'qish uchun materiallar
-https://docs.djangoproject.com/en/4.0/topics/db/models/
-https://docs.djangoproject.com/en/4.0/topics/files/
-
-## 2. Amaliyot. O'qituvchi
-
-**Reja:**
-- [2.1 CREATE - tuzish](#21-CREATE---tuzish)
-  - [2.1.1 Profile modeli](#211-profile-modeli)
-  - [2.1.2 Project modeli](#212-project-modeli)
-  - [2.1.3 Message modeli](#213-message-modeli)
-  - [2.1.4 Skill modeli](#214-skill-modeli)
-  - [2.1.5 Review modeli](#215-review-modeli)
-  - [2.1.6 Tag modeli](#216-tag-modeli)
-  - [2.1.7 Signallar](#217-signallar)
-  - [2.1.8 Property](#218-property)  
-- [2.2 Modellarni bog'lash](#22-modellarni-boglash)
-   - [2.2.1 Birga bir](#221-birga-bir)
-   - [2.2.2 Birga ko'p](#222-birga-kop)
-   - [2.2.3 Ko'pga ko'p](#223-kopga-kop)
-
-### 2.1 CREATE - tuzish
+# 1 CREATE - tuzish
 CREATE bu SQL so'rov tilida jadval tuzish uchun ishlatiladi. Djangoda esa bu modellar orqali amalga oshiriladi. Jadval tuzish uchun qadamlar:
 
 1. **Ma'lumotlar ba'zasi strukturasi**ni(sxemasi) ishlab chiqish
@@ -67,6 +56,7 @@ MB sxemasini ixtiyoriy online instrumentlardan biri yordamida yasaymiz:
 MB sxemasini qilib bo'lgach, yangi loyiha ochib, app qo'shib modellarni yozishni boshlaymiz
 <br>
 1. Yangi loyiha ochish
+
 ```commandline
 # yangi loyiha yaratish
 django-admin startproject students_portfolio
@@ -114,7 +104,7 @@ python manage.py createsuperuser
 
 6. loyihani ishga tushirib, http://127.0.0.1:8000/admin/ urlga parol login bilan kiramiz. Natijada biz users va groups jadvalini ko'ramiz
 
-#### 2.1.1 Profile modeli
+## 1.1 Profile modeli
 
 7. users/model.py ga kirib, profile modelini yozamiz
 
@@ -378,7 +368,7 @@ Kodni yozib bo'lgach ishga tushiramiz. file ga xato fayl kiritamiz, natija quyid
 1. Profile modelidagi audio uchun faqat mp3 fayllarni qabul qiladigan funksiya yozing. Ma'lumot kiritib tekshirib ko'ring
 2. Qanday qilib kodni o'zgartirmasdan audio ga mp3 dan boshqa faylni yozib qo'yish mumkin 
 
-#### 2.1.2 Project modeli
+## 1.2 Project modeli
 
 Project jadvalida o'quvchilar qilgan loyiha haqida ma'lumotlar saqlanadi
 
@@ -420,7 +410,7 @@ python manage.py migrate
 Bu yerda:
 - IntegerField - butun sonlar uchun 
 
-#### 2.1.3 Message modeli
+## 1.3 Message modeli
 
 Message jadvalida o'quvchiga yuboriladigan habarlar saqlanadi
 <br>
@@ -447,7 +437,7 @@ python manage.py migrate
 ```
 
 
-#### 2.1.4 Skill modeli
+## 1.4 Skill modeli
 Skill jadvalida o'quvchilarning qo'shimcha malakasi haqida ma'lumotlari saqlanadi
 <br>
 19. projects/models.py faylida Skill modelini yozib, uni tadbiq qiling:
@@ -473,7 +463,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-#### 2.1.5 Review modeli
+## 1.5 Review modeli
 Review jadvalida mijozlarning o'quvchining loyihasiga berilgan izohi va bahosi saqlanadi
 <br>
 
@@ -498,7 +488,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-#### 2.1.6 Tag modeli
+## 1.6 Tag modeli
 Tag jadvalida o'quvchining loyihasida nima texnologiyalar, qaysi dasturlash tillari, qaysi freymwork ishlatilganligi haqida teg (ma'lumotlar) saqlanadi
 <br>
 
@@ -520,7 +510,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-#### 2.1.7 Signallar
+## 1.7 Signallar
 [Signal bo'yicha hujjat](https://docs.djangoproject.com/en/4.1/topics/signals/)
 [Signal turlari](https://docs.djangoproject.com/en/4.1/ref/signals/#django.db.models.signals.pre_save)
 <br>
@@ -595,7 +585,7 @@ def delete_user(sender, instance, **kwargs):
     user.delete()
 
 ```
-#### 2.1.8 Property
+## 1.8 Property
 
 Masala. Foydalanuvchi loyihaga 'Yoqdi' yoki 'Yoqmadi' tugmasini bosganda  dastur o'zi bazadagi vote_count va vote_ratio qiymatlarini hisoblab yangilab qo'ysin. 
 Funksiya o'zi hisoblaydi, tashqaridan o'zgartirilmaydi, shuning uchun property dekoratoridan foydalansak bo'ladi
@@ -624,14 +614,14 @@ class Project(models.Model):
 
 Foydalanuvchi har gal ovoz bergandan keyin bu hususiaytni chaqirsak, bazadagi vote_count va total_ratio ni yangilab qo'yadi
 
-### 2.2 Modellarni bog'lash
+# 2 Modellarni bog'lash
 
 Modellarimiz tayyor bo'ldi. Endi ularni MB sxemasiga qarab o'zaro bog'laymiz. Relatsion MBda quyidagicha bog'lash turlari mavjud:
 - Birga bir
 - Birga ko'p
 - Ko'pga ko'p
 
-#### 2.2.1 Birga bir bog'lash
+## 2.1 Birga bir bog'lash
 ![](Rasmlar/img_2.png)
 
 Rasmga qaraymiz va birga bir bog'lanishlarni topamiz:
@@ -666,7 +656,7 @@ python manage.py migrate
 
 Edni loyihani ishga tushirib, user jadvaliga bir nechta foydalanuvchi qo'shib, profile jadvalidan foydalanuvchini ko'rsatib saqlang. Shunda qaysi profil qaysi foydalanuvchiga tegishli ekanligi ma'lum bo'ladi
 
-#### 2.2.2 Birga ko'p
+## 2.2 Birga ko'p
 
 22. Rasmga qarab birga ko'p bog'lanishlarni topishga harakat qilamiz
 - Project va Review
@@ -688,7 +678,7 @@ Har bitta bog'lanishni ko'rib chiqamiz:
 
 Endi har birini modelda yozib chiqamiz <br>
 
-##### Project va Review
+### Project va Review
 
 ```python
 from django.db import models
@@ -708,7 +698,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-##### Profile va Message
+### Profile va Message
 
 ```python
 from django.db import models
@@ -731,7 +721,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-##### Profile va Skill
+### Profile va Skill
 
 ```python
 from django.db import models
@@ -754,7 +744,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-##### Profile va Project
+### Profile va Project
 ```python
 from django.db import models
 from users.models import Profile
@@ -779,7 +769,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-##### Profile va Review
+### Profile va Review
 ```python
 from django.db import models
 from users.models import Profile
@@ -799,7 +789,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-#### 2.2.3 Ko'pga ko'p
+## 2.3 Ko'pga ko'p
 
 ![](Rasmlar/img_2.png)
 
@@ -842,7 +832,7 @@ python manage.py migrate
 Endi loyihani ishga tushirib har bir jadvalga to'liq ma'lumot kiritib chiqamiz. Keyingi dars CRUD amallarini ko'ramiz
 
 
-## 3. Amaliyot. O'quvchi
+# 3. Amaliyot. O'quvchi
 Quyidagi saxifalarning MB sxemalasini tuzib, so'ng Djangoda loyiha ochib, ilova qo'shib, modellarini tuzing
 MB sxemasi quyidagi [dbdesigner](https://app.dbdesigner.net/) saytidan  foydalaning 
 1. Restoran sahifasi [adanakebab](https://997926933shoh.github.io/ADANA_KEBAB/#include)
@@ -852,7 +842,7 @@ MB sxemasi quyidagi [dbdesigner](https://app.dbdesigner.net/) saytidan  foydalan
 3. Yangiliklar sahifasi [kun.uz](https://kun.uz/)
 
 
-Endi faraz qiling siz o'quvchilarni bor/yo'q qiladigan sahifa qilishingiz kerak. Uni quyidagi imkoniyatlari bo'lishi kerak:
+4. Endi faraz qiling siz o'quvchilarni bor/yo'q qiladigan sahifa qilishingiz kerak. Uni quyidagi imkoniyatlari bo'lishi kerak:
 <br>
 - O'quvchilarni bor/yo'q deb belgi qo'yish
 - Uyga vazifani bajardi/bajarmadi deb belgi qo'yish
@@ -862,8 +852,8 @@ Yuqoridagi talab va imkoniyatlarga qarab o'zingiz o'ylab MB sxemasini tuzing, so
 Uning uchun o'zingizga quyidagi savollarni berib, javob toping
 
 **O'ylab ko'ring:**
-1. Yuqoridagi imkoniyatlar bo'lishi uchun bazada qanday ma'lumotlar kerak?
-2. U ma'lumotlarning strukturasi qanday bo'ladi?
+- Yuqoridagi imkoniyatlar bo'lishi uchun bazada qanday ma'lumotlar kerak?
+- U ma'lumotlarning strukturasi qanday bo'ladi?
   
-   Unutmang. Jadval nima haqida bo'lsa, usha narsa qaytarilmas bo'lishi kerak:
+_Unutmang_. Jadval nima haqida bo'lsa, usha narsa qaytarilmas bo'lishi kerak:
 
