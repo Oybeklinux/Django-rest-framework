@@ -203,6 +203,7 @@ E'tibor bering QuerySet Project oyektidan emas, values() metodida ko'rsatildan i
 
 ### 2.9 values_list
 values_list - values() metodi bilan deyarli bir hil faqat farqi shundaki, QuerySet tarkibidagi elementlar values() metodida dict toifasini bo'lsa, values_list() metodida tuple toifasi bo'ladi:
+
 15. Teglarni hammasini ekranga dict va tuple ko'rinishida chiqaring. So'ng ulardan faqat birinchisini chiqaring 
 ```text
 >>> Tag.objects.values()
