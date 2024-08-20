@@ -148,7 +148,7 @@ Asror test ahabar
 
 ```
 ### 2.6 reverse
-reverse tartiblangan (ya'ni order_by() metodi ishlatilgan) QuerySet teskarilab beradi. Tartiblanmagan QuerySetga ishlatishda ta'siri yo'q
+reverse tartiblangan (ya'ni order_by() metodi ishlatilgan) QuerySet teskarilab beradi. Tartiblanmagan QuerySetga qo'llanilsa, ta'siri bo'lmaydi. Tartiblangan QuerySetga ishlatiladi
 
 10. Quyidagi misol id bo'yicha tartiblangan loyihalar ro'yxatini (QuerySet) teskarilab beradi 
 
