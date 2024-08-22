@@ -276,7 +276,7 @@ yoki
 
 ```text
 >>> users.last()
-<Profile: Asror>
+<Profile: Husniddin>
 ```
 
 lekin indexga -1 berib bo'lmaydi
